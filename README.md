@@ -24,6 +24,12 @@ npx skills add mochenai/mochen-website-design --skill mochen-website-design
 npx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global
 ```
 
+也可以 [下载 Skill 安装包](https://mochenai.github.io/mochen-website-design/downloads/mochen-website-design-1.0.1.zip)，解压后在它的父目录运行：
+
+```bash
+npx skills add ./mochen-website-design --skill mochen-website-design --agent codex --global
+```
+
 然后直接输入：
 
 ```text
