@@ -170,7 +170,7 @@
       cursor.style.transform = "translate3d(" + mouseX + "px," + mouseY + "px,0)";
       var text = !!e.target.closest("input,textarea,[contenteditable='true']");
       cursor.classList.toggle("is-text", text);
-      cursor.classList.toggle("is-link", !text && !!e.target.closest("a,button,[role='button'],select,label,summary"));
+      cursor.classList.toggle("is-link", !text && !!e.target.closest("a,button,[role='button'],select,label,summary,.job"));
     }
     var card = e.target.closest(".project,.article-card,.wechat-card");
     if (card) {

@@ -544,7 +544,7 @@
       '<div class="experience-list">' + jobs.map(function (j) {
         return '<article class="job">' +
           '<div>' +
-            '<div class="job-company">' + esc(j.company) + '</div>' +
+            '<h4 class="job-company"><button class="job-activate" type="button" title="点击标记这段履历"><span class="job-company-mark">' + esc(j.company) + '</span></button></h4>' +
             '<div class="job-role">' + esc(j.role) + '</div>' +
             '<p class="job-summary">' + esc(j.summary) + '</p>' +
             (j.details && j.details.length ? '<ul class="job-details">' + j.details.map(function (d) { return "<li>" + esc(d) + "</li>"; }).join("") + '</ul>' : '') +
@@ -552,11 +552,33 @@
         '</article>';
       }).join("") + '</div>' +
 
-      '<div class="block-head"><h3>写作与兴趣</h3><span class="rule"></span><span class="idx">Personal</span></div>' +
-      '<div class="info-grid">' +
-        '<div class="info-block"><h4>内容与影响</h4><p>' + (p.influence || []).map(esc).join("<br>") + '</p></div>' +
-        '<div class="info-block"><h4>兴趣</h4><div class="inline-tags">' + (p.interests || []).map(function (c) { return '<span class="chip">' + esc(c) + '</span>'; }).join("") + '</div></div>' +
+      '<div class="block-head"><h3>AI 自研项目</h3><span class="rule"></span><span class="idx">Projects / ' + (p.aboutProjects || []).length + '</span></div>' +
+      '<div class="info-grid">' + (p.aboutProjects || []).map(function (project) {
+        return '<article class="info-block"><h4>' + esc(project.title) + '</h4><p>' + esc(project.summary) + '</p>' +
+          '<ul class="job-details">' + (project.details || []).map(function (detail) { return '<li>' + esc(detail) + '</li>'; }).join("") + '</ul></article>';
+      }).join("") + '</div>' +
+      '<div class="block-head"><h3>工作之外</h3><span class="rule"></span><span class="idx">Personal</span></div>' +
+      '<div class="info-block personal-block">' +
+        '<div class="inline-tags">' + (p.interests || []).map(function (interest) { return '<span class="chip">' + esc(interest) + '</span>'; }).join("") + '</div>' +
+        '<p>' + esc((p.outdoor || {}).routes) + '</p>' +
+        '<p>' + esc((p.outdoor || {}).description) + '</p>' +
       '</div>';
+
+    $$(".job", box).forEach(function (job) {
+      job.addEventListener("click", function () {
+        var selection = window.getSelection();
+        if (selection && !selection.isCollapsed) return;
+        var mark = $(".job-company-mark", job);
+        job.classList.add("is-marked");
+        if (!reduceMotion && mark.animate) {
+          mark.getAnimations().forEach(function (animation) { animation.cancel(); });
+          mark.animate([{ backgroundSize: "0% 42%" }, { backgroundSize: "100% 42%" }], {
+            duration: 600,
+            easing: "cubic-bezier(.22,.61,.36,1)"
+          });
+        }
+      });
+    });
   }
 
   /* ---------------- 交流 ---------------- */
@@ -581,8 +603,6 @@
       '<div class="connect-lines">' +
         '<div class="connect-line"><span class="n">01</span><span><strong>公众号</strong> · 更新频率最高</span><span class="val">' + esc(name) + '</span></div>' +
         '<div class="connect-line"><span class="n">02</span><span><strong>写作</strong> · 已收录 ' + state.articles.length + ' 篇</span><span class="val">本站</span></div>' +
-        '<div class="connect-line"><span class="n">03</span><span><strong>内容影响</strong> · 人人都是产品经理 / 虎嗅签约作者</span><span class="val">署名</span></div>' +
-        '<div class="connect-line"><span class="n">04</span><span><strong>社区</strong> · WaytoAGI 共创者</span><span class="val">共创</span></div>' +
       '</div>';
 
     var btn = $("#copy-wechat");
