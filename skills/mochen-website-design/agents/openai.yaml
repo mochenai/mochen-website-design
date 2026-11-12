@@ -1,0 +1,7 @@
+interface:
+  display_name: "个人网站设计skill"
+  short_description: "把文章、资料、作品和产品内容做成可交互的陌晨风格网站"
+  icon_small: "./assets/skill-icon.png"
+  icon_large: "./assets/skill-icon.svg"
+  brand_color: "#FFE28A"
+  default_prompt: "使用 $mochen-website-design，把我提供的内容做成陌晨风格网站，完成交互并在本机预览。"

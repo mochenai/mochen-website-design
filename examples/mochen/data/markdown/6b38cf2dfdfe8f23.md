@@ -1,0 +1,129 @@
+![Pasted image 20261021104307](media/60b831eb657e30f4dd7e.webp)大家好，我是陌晨。
+
+最近后台问得最多的一个问题，skill到底该装哪些？
+
+skills.sh、ClawHub上加起来几万个skill，挨个试根本试不完。装多了还有副作用，AI每次干活都要先翻一遍说明书，反而变慢。
+
+我自己来回装了删、删了装，最后常驻的就这8个。
+
+前4个管「AI本身」，让它会找工具、会记错、会造工具、会主动干活。后4个管「你的活」，做图表、去AI味、做PPT、处理办公文档。
+
+安装量数据截至10月21日，来自skills.sh和ClawHub官方榜单。
+
+装之前说一句，下面的命令需要电脑上有Node.js。不想敲命令也行，把GitHub地址丢给Claude Code、Codex、WorkBuddy这类工具，说一句「帮我装这个skill」就够了。
+
+## Find Skills：skill的搜索引擎
+
+skills.sh榜单第一，累计安装395万次，Vercel Labs出品。
+
+它是一个「找skill的skill」。你不用知道skill叫什么，直接说需求，比如「有没有能把会议录音整理成纪要的skill」，它去榜单上帮你搜，按安装量排好，挑靠谱的直接装。
+
+安装量太低、来路不明的，它会提醒你别装。**装skill最怕的不是找不到，是装错。**
+
+`安装：npx skills add vercel-labs/skills@find-skills`
+
+用法很简单，装完直接问「帮我找一个做XX的skill」。
+
+## Self Improving：给AI装个错题本
+
+ClawHub上下载量48万+，作者pskoett。
+
+AI最让人崩溃的地方，是同一个错误你纠正了三遍，换个对话它照犯不误。
+
+这个skill会在你纠正它、它执行报错、你提出更好的做法时，自动把这条经验写进本地的学习日志。下次遇到类似任务，先翻日志再动手。
+
+第一次用几乎感觉不到。用到第十次，差距就出来了，它开始记得你的文件放哪、你讨厌什么写法、哪条命令在你电脑上跑不通。
+
+`安装：npx skills add pskoett/self-improving-agent`
+
+装完正常用就行，纠正它的时候说清楚「记住，以后XX要这样做」，效果最好。
+
+## Skill Creator：把重复的活变成skill
+
+Anthropic官方出品，skills.sh安装量41万+。WorkBuddy、Claude Code里基本都自带了。
+
+你有没有那种每周都要干一遍的活？比如整理周报、按固定格式改稿、把表格转成固定模板。
+
+把流程跟它描述一遍，「我每周一要把上周的销售数据整理成这样的表，规则是XX」，它直接帮你生成一个新skill。之后一句「做周报」就能调用，不用写一行代码。
+
+**会用skill是第一步，会造skill才是真正拉开差距的地方。**
+
+`安装：npx skills add anthropics/skills@skill-creator`
+
+## Proactive Agent：让AI主动找活干
+
+ClawHub下载量17.7万+，作者halthelobster（对，又一只龙虾🦞）。
+
+普通AI是你问一句它答一句。装上这个之后，它会反过来想「我还能帮你做点什么」，主动提醒你没注意到的问题，主动补上你忘了提的需求。
+
+它还有一个很实用的设计，重要的决定和细节在回复之前先写进文件。对话太长、上下文被压缩之后，它能照着记录把进度接回来。
+
+`安装：npx skills add halthelobster/proactive-agent`
+
+提醒一下，它会让AI变得「话多」一点，适合长期项目和个人助理场景。只想要快问快答的，可以不装。
+
+## SmartCharts：表格一键变看板
+
+ClawHub上的smart-charts，支持32种图表、3套主题。
+
+把Excel、CSV或者JSON文件拖进对话框，它会自己判断数据适合用柱状图、折线图还是饼图，直接生成可交互的HTML看板，鼠标悬停能看数值，不用在Excel里手动拖来拖去。
+
+做月报、看投放数据、给老板汇报，够用了。
+
+`安装：在对话里说「帮我从ClawHub安装 neuhanli/smart-charts」`
+
+## Humanizer：专门去AI味
+
+中文版Humanizer-zh在skills.sh上安装5.4万次，英文原版ClawHub下载13万+。
+
+AI写的东西最大的问题不是写错，是写得太「对」。排比堆砌，首先其次最后，结尾一句空洞的升华，一眼就能认出来。
+
+它会把这些痕迹挑出来清掉。公众号、小红书、周报都能用。**坚持原创调性的，这是刚需。**
+
+`安装：npx skills add op7418/humanizer-zh`
+
+装完写好初稿，说一句「用humanizer帮我去掉这段的AI味」。
+
+## PPT Master：生成能改的真PPT
+
+GitHub上6.4万星，作者Hugo He。
+
+市面上很多AI做PPT，导出来是一张张图片，想改个字都改不了。PPT Master出来的是原生PPTX，每个文本框、形状、图表都能点开接着编辑，图表还是带数据的。
+
+它能读你公司现成的PPT模板，把品牌色、字体、版式提炼出来，之后生成的每一份都长一个样。Word、PDF、Markdown丢进去，直接出PPT。
+
+`安装：git clone https://github.com/hugohe3/ppt-master.git，进目录后 pip install -r requirements.txt`
+
+它需要Python 3.10以上。用法是在AI工具里打开这个项目文件夹，说一句「用这份PDF帮我做一个PPT」。
+
+## PDF/Word/Excel办公三件套
+
+我推荐直接装Anthropic官方那套，pdf、docx、xlsx三个skill在skills.sh上的安装量都在18万到21万之间。
+
+PDF合并拆分、提取表格、加水印；Word按格式排版、批量改文档；Excel清洗数据、写公式、做透视。打工人高频的这些活，基本都覆盖了。
+
+```
+npx skills add anthropics/skills@pdf
+npx skills add anthropics/skills@docx
+npx skills add anthropics/skills@xlsx
+```
+
+装完直接说「把这5个PDF合并成一个」「把这张表里重复的客户去掉」就行。
+
+## 怎么选
+
+不用8个全装。
+
+刚开始用AI的，先装Find Skills和Humanizer，一个帮你找工具，一个帮你改稿，马上能用上。
+
+天天用AI干活的，再加上Self Improving和Skill Creator，一个让它越用越懂你，一个把你的重复劳动固化下来。
+
+剩下几个，缺什么补什么。
+
+回头看这份清单，真正值钱的其实是前4个。后4个解决的是一件件具体的活，前4个解决的是AI怎么越用越好用。
+
+**工具会越来越多，但一个会记错、会造工具的AI，才是真正长在你身上的。**
+
+这8个你装过哪几个？欢迎**评论区分享。**
+
+我是陌晨，下次见。

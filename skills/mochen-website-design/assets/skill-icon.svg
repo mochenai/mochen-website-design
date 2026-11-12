@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" rx="80" fill="#fffdf5"/>
+  <g stroke="#1a1a1a" stroke-opacity=".055"><path d="M48 0v400M96 0v400M144 0v400M192 0v400M240 0v400M288 0v400M336 0v400M384 0v400M0 48h400M0 96h400M0 144h400M0 192h400M0 240h400M0 288h400M0 336h400M0 384h400"/></g>
+  <rect x="70" y="68" width="260" height="264" rx="16" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+  <path d="M70 107h260" stroke="#1a1a1a" stroke-width="3"/>
+  <circle cx="88" cy="88" r="4" fill="#1a1a1a"/><circle cx="104" cy="88" r="4" fill="#ffe28a"/>
+  <rect x="96" y="138" width="140" height="47" rx="4" fill="#ffe28a"/>
+  <text x="103" y="177" font-family="Helvetica,Arial,sans-serif" font-size="44" font-weight="800" letter-spacing="-3" fill="#1a1a1a">MO.</text>
+  <path d="M98 206h170M98 222h121" stroke="#d7d0bd" stroke-width="5" stroke-linecap="round"/>
+  <rect x="96" y="250" width="94" height="54" rx="6" fill="#fbf8ee" stroke="#e4ddca"/><rect x="208" y="250" width="94" height="54" rx="6" fill="#ffe28a" stroke="#e4cf87"/>
+  <path d="m264 264 15 10-9 3-3 9z" fill="#1a1a1a"/>
+</svg>

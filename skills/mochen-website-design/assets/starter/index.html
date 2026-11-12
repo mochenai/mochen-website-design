@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{SUMMARY}}">
+  <title>{{TITLE}} · {{AUTHOR}}</title>
+  <link rel="stylesheet" href="assets/gaze-dog/dog-sprite.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pet.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="首页"><b>{{BRAND}}</b><span>{{AUTHOR}}</span></a>
+    <nav class="header-nav" aria-label="快捷导航">{{RETURN}}<a href="#content">浏览内容 ↗</a></nav>
+  </header>
+  <main id="main">
+    <div id="home">
+      <section class="hero shell" id="top" aria-label="首页介绍">
+        <div class="hero-main">
+          <p class="eyebrow">{{EYEBROW}}</p>
+          <h1 class="hero-title {{HERO_CLASS}}">{{HERO_LINES}}</h1>
+        </div>
+        <div class="hero-illustration">{{ART}}<div class="hero-pet-slot" id="hero-pet-slot"></div></div>
+        <div class="hero-meta"><mark>{{AUTHOR}}</mark><p>{{SUMMARY}}</p></div>
+        <a class="scroll-hint" href="#content"><span>往下看</span><span aria-hidden="true">↓</span></a>
+      </section>
+      <section class="content shell" id="content" aria-label="内容浏览">
+        <nav class="tab-row" id="section-tabs" role="tablist" aria-label="内容栏目"></nav>
+        <div class="panel-head">
+          <div><p class="eyebrow" id="panel-index"></p><h2 id="panel-title"></h2><p class="panel-description" id="panel-description"></p></div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜一下…" aria-label="搜索当前栏目内容" autocomplete="off"></label>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="内容分类"></div>
+        <p class="visually-hidden" id="live-status" role="status">页面载入中</p>
+        <div id="content-list" role="tabpanel" tabindex="-1"></div>
+      </section>
+    </div>
+    <section class="reader shell" id="reader" aria-label="正文阅读" hidden>
+      <button type="button" class="reader-back" id="reader-back">← 返回列表</button>
+      <p class="eyebrow" id="reader-tag"></p>
+      <h1 id="reader-title" tabindex="-1"></h1>
+      <p class="reader-summary" id="reader-summary"></p>
+      <div class="prose" id="reader-body"></div>
+      <div class="resource-links" id="reader-links"></div>
+    </section>
+  </main>
+  <footer class="site-footer shell"><p>© {{YEAR}} {{AUTHOR}} · {{BRAND}}</p><p id="contact"></p>{{RETURN}}</footer>
+  <aside class="desktop-pet" id="desktop-pet" aria-label="Gaze-Dog 桌面小狗" {{PET_HIDDEN}}>
+    <span class="pet-tip" aria-hidden="true">拖动移动 · 双击归位</span>
+    <div class="gaze-dog" id="gaze-dog" role="button" tabindex="0" aria-label="可拖动的小狗；方向键移动，双击或按 Home、Enter 归位" aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Home Enter"></div>
+    <button class="motion-permission gaze-sensor-btn" id="motion-permission" type="button" aria-pressed="false" hidden>开启体感</button>
+  </aside>
+  <noscript><p class="shell">请启用 JavaScript 以浏览内容、搜索和阅读正文。</p></noscript>
+  <script src="site-data.js"></script>
+  <script src="assets/gaze-dog/dog-sprite.js"></script>
+  <script src="pet-drag.js"></script>
+  <script src="pet.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

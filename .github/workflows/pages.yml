@@ -1,0 +1,47 @@
+name: Deploy website example to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check example integrity
+        run: python3 scripts/check_site.py examples/mochen
+      - name: Verify the reusable generator
+        run: |
+          python3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/generated-example
+          python3 skills/mochen-website-design/scripts/validate_site.py work/generated-example
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Build static example
+        run: python3 scripts/build_pages.py --output _site
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

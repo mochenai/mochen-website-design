@@ -1,0 +1,122 @@
+/* The operator and the original GazeDog share a drawing, paper and ink. */
+.hero-title .line-2 { margin-left: .04em; }
+.hero-illustration {
+  position: absolute;
+  right: -32px;
+  bottom: 0;
+  width: min(43%, 336px);
+  aspect-ratio: 440 / 410;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-illustration .hero-art {
+  position: relative;
+  width: 100%;
+  right: auto;
+  bottom: auto;
+  display: block;
+  filter: none;
+}
+.hero-pet-slot {
+  position: absolute;
+  right: -108px;
+  bottom: -8px;
+  pointer-events: none;
+}
+.desktop-pet {
+  --pet-size: 150px;
+  position: fixed;
+  right: max(24px, calc((100vw - 1280px) / 2));
+  bottom: 18px;
+  width: var(--pet-size);
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  transition: opacity .6s ease;
+}
+.desktop-pet .gaze-dog {
+  width: var(--pet-size) !important;
+  height: var(--pet-size) !important;
+  flex: none;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.desktop-pet.is-dragging .gaze-dog { cursor: grabbing; }
+.desktop-pet .gaze-dog:focus-visible { outline: 2px solid var(--ink); outline-offset: -16px; border-radius: 24px; }
+.desktop-pet.is-floating { position: fixed; z-index: 80; }
+.pet-tip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - 18px);
+  transform: translateX(-50%);
+  padding: 4px 9px;
+  border: 1px solid var(--hair);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .2s ease;
+  pointer-events: none;
+}
+.desktop-pet:hover .pet-tip, .desktop-pet:focus-within .pet-tip { opacity: 1; }
+.desktop-pet.is-dragging .pet-tip { opacity: 0; }
+@media (pointer: coarse) { .pet-tip { display: none; } }
+.desktop-pet.is-in-hero {
+  --pet-size: 124px;
+  position: relative;
+  right: auto;
+  bottom: auto;
+}
+.desktop-pet .motion-permission {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  margin-top: -5px;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+.desktop-pet .motion-permission.on {
+  background: var(--accent);
+  color: var(--ink);
+  border-color: #f5c542;
+}
+html.is-booting .desktop-pet { opacity: 0; }
+body.reader-mode .desktop-pet.is-in-hero { display: none; }
+@media (min-width: 720px) and (max-width: 1099px) {
+  .hero-illustration { width: 36%; right: 100px; }
+}
+@media (max-width: 719px) {
+  .hero-title { line-height: .92; }
+  .hero-title .line-2 { margin-left: .02em; }
+  .hero-illustration {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 208px;
+    margin-top: 10px;
+    aspect-ratio: auto;
+  }
+  .hero-illustration .hero-art {
+    position: absolute;
+    left: -4px;
+    bottom: 0;
+    width: min(65%, 224px);
+    right: auto;
+  }
+  .hero-pet-slot { right: 0; bottom: 0; }
+  .desktop-pet.is-in-hero { --pet-size: 112px; }
+  .hero-meta { margin-top: 18px; }
+}
+@media (max-width: 359px) {
+  .hero-title { font-size: clamp(58px, 20vw, 71px); }
+  .hero-illustration { height: 190px; }
+  .desktop-pet.is-in-hero { --pet-size: 96px; }
+}

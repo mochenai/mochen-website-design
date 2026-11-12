@@ -1,0 +1,9 @@
+# Local files and generated output
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+_site/
+work/

@@ -1,0 +1,87 @@
+# 个人网站设计 Skill
+
+把文章、笔记、履历、作品或产品资料做成可浏览、可交互的网站，沿用陌晨的纸白网格、炭黑大字、浅黄强调和小狗交互。
+
+![陌晨个人网站完整示例](docs/screenshots/mochen-home.png)
+
+**一个仓库，两种用法：安装 Skill 做自己的网站；浏览陌晨网站看完整示例。**
+
+- [陌晨个人网站 · 在线示例](https://mochenai.github.io/mochen-website-design/)
+- [Skill 使用页](https://mochenai.github.io/mochen-website-design/works/website-design-skill/)
+- [Skill 源码](skills/mochen-website-design/SKILL.md)
+
+## 安装并使用
+
+在支持 Skills 的 Codex / Claude Code 等工具中安装：
+
+```bash
+npx skills add mochenai/mochen-website-design --skill mochen-website-design
+```
+
+希望在 Codex 的所有项目中使用，可以安装到全局：
+
+```bash
+npx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global
+```
+
+然后直接输入：
+
+```text
+用 $mochen-website-design，把下面的内容做成陌晨风格的网站：
+
+（粘贴文章、笔记、作品介绍，或提供文件路径）
+```
+
+内容决定栏目；品牌、署名、标题和联系方式可以换成自己的。Skill 会读取材料、组织页面、实现交互并在本机预览。PDF、图片、DOCX 等先由所用 AI 工具提取；生成器直接支持 JSON、Markdown 和 TXT。网页本身不调用 AI 接口。
+
+## 不安装 Skill 也能运行
+
+需要 Python 3.9+，没有第三方 Python 依赖，不需要 API Key 或 npm 构建：
+
+```bash
+git clone https://github.com/mochenai/mochen-website-design.git
+cd mochen-website-design
+
+python3 skills/mochen-website-design/scripts/build_site.py \
+  --input skills/mochen-website-design/assets/example-content.json \
+  --output work/my-site-v1
+
+python3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1
+python3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1
+```
+
+打开 http://127.0.0.1:8787/ 。输出目录必须是新目录，生成器会拒绝覆盖。把 `--input` 换成自己的 Markdown 或 JSON 即可；JSON 字段说明见 [内容格式](skills/mochen-website-design/references/content-schema.md)。
+
+## 有哪些效果
+
+- 首页与滚动进入、卡片悬停和点击反馈、栏目切换、人物呼吸眨眼和视线跟随。
+- 搜索、分类、正文阅读、返回列表，保留搜索条件和滚动位置。
+- Gaze-Dog 平滑转头；按住拖动、刷新记忆、双击或 Home / Enter 归位、方向键移动。
+- 桌面和手机布局，支持系统减少动态效果和 `?motion=reduce`。
+
+## 陌晨是完整示例
+
+[examples/mochen](examples/mochen) 包含陌晨的六个作品、118 篇文章、六段工作经历，以及真实 Skill 使用页与下载。它是根据本人资料编排的完整网站；通用 Skill 安装包只包含模板、生成器、设计约定与中性示例，不带这份履历和文章库。
+
+在本机预览完整示例：
+
+```bash
+python3 -m http.server 8787 --bind 127.0.0.1 --directory examples/mochen
+```
+
+## 仓库结构
+
+```text
+skills/mochen-website-design/  可安装的 Skill、模板与生成器
+examples/mochen/              陌晨个人网站示例
+scripts/build_pages.py        只打包示例网站到 Pages
+scripts/check_site.py         检查文章、资源和页面入口
+.github/workflows/pages.yml   自动检查与部署
+docs/github-pages.md          部署和更新方法
+```
+
+GitHub Pages 将示例发布在仓库网址的根路径。只发布 `examples/mochen/`，不会把其他资料目录发布成网页。推送到 `main` 后自动检查并更新，详见 [GitHub Pages 部署](docs/github-pages.md)。
+
+## 许可与来源
+
+自有代码采用 [MIT](LICENSE)。陌晨示例中的文章、履历、名称和个人内容保留作者权利，复用网站时请换成自己的内容。小狗的原始组件及精灵遵循原仓库说明，见 [第三方来源](THIRD_PARTY_NOTICES.md)。设计语言参考 [oiloil.org](https://www.oiloil.org/)，小狗组件来自 [Mr-xue/Gaze-Dog](https://github.com/Mr-xue/Gaze-Dog)。

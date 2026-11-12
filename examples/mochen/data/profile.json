@@ -1,0 +1,216 @@
+{
+  "name": "陌晨",
+  "brand": "MOCHEN",
+  "role": "AI Agent 运营 · 写作者",
+  "location": "上海",
+  "headline": "把业务 SOP 变成 Agent 可执行流程。",
+  "intro": "会 vibe coding 的运营。12 年互联网产品与运营经验，近 3 年专注 AI 产品与 Agent 落地：做过 AIGC 冷启动、AI 搜索运营、站内 Agent 矩阵与 GEO 评测系统。",
+  "wechat": "Agent 陌晨",
+  "contacts": {
+    "display": "wechat_name_only"
+  },
+  "tags": [
+    "AI Agent",
+    "Vibe Coding",
+    "产品运营",
+    "GEO",
+    "内容创作",
+    "上海"
+  ],
+  "metrics": [
+    {
+      "value": "12",
+      "label": "年产品与运营经验"
+    },
+    {
+      "value": "70",
+      "label": "本地 Skill 库"
+    },
+    {
+      "value": "118",
+      "label": "篇写作收录"
+    },
+    {
+      "value": "82%",
+      "label": "出海 KA 客户使用率"
+    }
+  ],
+  "skills": [
+    "Agent 搭建",
+    "Prompt 工程",
+    "Skill 封装",
+    "Claude Code",
+    "Codex",
+    "Coze",
+    "RAG 知识库",
+    "向量检索",
+    "GEO 搜索增长",
+    "评测体系",
+    "PLG 运营",
+    "Obsidian 工作台",
+    "Meta / TikTok Ads",
+    "SEM / 内容营销"
+  ],
+  "experience": [
+    {
+      "company": "蓝色光标集团",
+      "role": "AI 运营专家",
+      "summary": "把跨境出海 Agent 广告系统从冷启动带到对客交付。",
+      "details": [
+        "面向独立站 / APP 出海客户，整合 Meta / TikTok / Google 广告 API，交付 pixel 自动安装、创意生成、投放策略与日 / 周报诊断。",
+        "KA 客户使用率约 82%，投放建议采纳落地率约 75%。",
+        "搭建 Obsidian + Codex 工作台，将内容创作、数据分析、市场调研封装为自动化 Skill，沉淀团队可复用的 PLG 运营方法。",
+        "开展 GEO 布局、渠道增长与服务商生态合作。"
+      ]
+    },
+    {
+      "company": "千图网",
+      "role": "项目合伙人",
+      "summary": "在设计素材与 AI 搜索场景搭建 25 类站内 Agent。",
+      "details": [
+        "以 Prompt 设计和场景知识库搭建 25 类站内 Agent，站内使用率 65%。",
+        "优化开搜 AI 的 RAG 知识库与向量检索，提升问答召回与准确率。",
+        "负责千图网、千图 AI、开搜 AI 的流量与商业化，产品线日均 IP 50 万。",
+        "以 AI 与 RPA 构建内容矩阵，渠道留存增长 30%，营收 ROI 1.4。"
+      ]
+    },
+    {
+      "company": "云想科技",
+      "role": "商业化产品运营",
+      "summary": "参与 AIGC 产品从 0 到 1 冷启动与付费转化。",
+      "details": [
+        "参与「云端妙笔」AIGC 平台冷启动，负责拉新与付费转化：拉新 2 万+，付费 1.1 万+，对话数 10 万+。",
+        "运营 SaaS 智投工具，使用率 65%，活跃客户 150 家，优质渠道商 67 家。",
+        "对接头部广告联盟，渠道差异化投放，ROI 稳定 ≥ 1.3。"
+      ]
+    },
+    {
+      "company": "齐家网",
+      "role": "商业化产品运营",
+      "summary": "广告运营、商户管理与投放效果优化。",
+      "details": [
+        "合作 KA 商户 120 家，日均收益 10 万，续费率 0.75；百度渠道日耗 2 万，ROI 1.8。"
+      ]
+    },
+    {
+      "company": "东方网",
+      "role": "商业化产品运营",
+      "summary": "流量运营、资源位收益与代理商管理。",
+      "details": [
+        "日均消耗 300 万，PC 资源位收益日均 50 万，对接代理商超百家，支付宝拉新活动结算超千万。"
+      ]
+    },
+    {
+      "company": "优酷土豆网",
+      "role": "产品运营 · 实习",
+      "summary": "视频内容策划、PGC 入驻与平台数据分析。",
+      "details": [
+        "负责单频道的内容运营与数据分析，日均 UV 603 万。"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "workbench",
+      "title": "Agent 工作台",
+      "subtitle": "把重复工作，变成可复用的流程。",
+      "kind": "Agent / Skill",
+      "metric": "70 Skills",
+      "description": "用 Obsidian、Codex 与 Claude Code 搭建内容创作、数据分析、市场调研工作台；从任务拆解到可验证交付，沉淀为可复用 Skill。",
+      "details": [
+        "维护 70 个本地 Skill 库。",
+        "将内容创作拆成选题、素材、大纲、初稿、去 AI 味、配图、排版、上传与发布等环节。",
+        "坚持人写主观点骨架，AI 扩写润色；在配图、排版、上传、发布设人工确认关卡。"
+      ],
+      "visual": "workflow"
+    },
+    {
+      "id": "geo",
+      "title": "GEO 监测与评测",
+      "subtitle": "把「被提及」和「被推荐」分开。",
+      "kind": "Chrome 扩展 / AI 搜索",
+      "metric": "TOP2",
+      "description": "自研 GEO 平台数据监测扩展，批量检查豆包、元宝、千问、DeepSeek 的搜索推荐，并建立可复核的评测口径。",
+      "details": [
+        "四平台批量搜索，单次 10 问，可重跑。",
+        "以 1 词根 + 5 长尾组织问题包，进行语义蒸馏。",
+        "区分提及、推荐、推荐位置、语境准确、同名误判五项口径。",
+        "12 类词根在 DeepSeek、豆包进入头部 TOP2。"
+      ],
+      "visual": "geo"
+    },
+    {
+      "id": "ads",
+      "title": "出海广告 Agent",
+      "subtitle": "让建议，真的进入业务动作。",
+      "kind": "增长运营 / Agent",
+      "metric": "82%",
+      "description": "面向独立站与 APP 出海客户，将广告 API、创意生成、投放策略和经营诊断连成一套交付流程。",
+      "details": [
+        "整合 Meta / TikTok / Google 广告 API。",
+        "交付 pixel 自动安装、创意生成、投放策略与日 / 周报诊断。",
+        "KA 客户使用率约 82%，投放建议采纳落地率约 75%。"
+      ],
+      "visual": "growth"
+    },
+    {
+      "id": "writing",
+      "title": "写作与视频 Skill",
+      "subtitle": "AI 做手，人保留判断。",
+      "kind": "内容流水线 / Claude Code",
+      "metric": "11 steps",
+      "description": "把选题到发布的创作流程封装为 Skill，用人机协同保留作者判断，让内容交付更可控。",
+      "details": [
+        "自研写作、视频生成 2 个 Skill。",
+        "11 步内容流水线，关键环节保留人工确认。",
+        "公开发文复盘 GEO、知识库与 Agent 方法论。"
+      ],
+      "visual": "writing"
+    },
+    {
+      "id": "agents",
+      "title": "25 类站内 Agent",
+      "subtitle": "从真实场景出发，而非堆叠功能。",
+      "kind": "Prompt / RAG",
+      "metric": "65%",
+      "description": "覆盖千图 AI 的设计素材与内容创作、开搜 AI 的学习与科研场景，将知识库与 Prompt 组织成可直接使用的 Agent。",
+      "details": [
+        "用 Prompt 设计 + 场景知识库搭建 25 类站内 Agent。",
+        "站内使用率 65%。",
+        "优化 RAG 与向量检索，提高知识问答召回与准确率。"
+      ],
+      "visual": "agents"
+    },
+    {
+      "id": "website-design-skill",
+      "title": "个人网站设计skill",
+      "subtitle": "任何内容，做成陌晨风格的网站。",
+      "kind": "网站设计 / Codex Skill",
+      "metric": "可复用",
+      "description": "把文章、资料、作品和产品内容编排成网页，统一纸白网格、大字、浅黄点缀，以及点击、阅读与宠物交互。",
+      "details": [
+        "按内容选择作品集、文章专题、产品介绍或知识页面结构。",
+        "包含可运行的生成器、网站模板、设计约定和检查脚本。",
+        "支持搜索筛选、正文跳转与返回、完整动效，以及可拖动并记住位置的小狗。",
+        "已开源到 GitHub，提供安装方法、实际示例、使用说明和下载。"
+      ],
+      "visual": "website",
+      "href": "works/website-design-skill/index.html",
+      "link_label": "查看使用方法",
+      "download": "downloads/mochen-website-design-1.0.0.zip"
+    }
+  ],
+  "influence": [
+    "人人都是产品经理 / 虎嗅签约作者",
+    "WaytoAGI 共创者",
+    "公众号「Agent 陌晨」持续写作"
+  ],
+  "interests": [
+    "骑行",
+    "徒步",
+    "露营",
+    "318 骑行",
+    "贡嘎大环线",
+    "稻城亚丁大环线"
+  ]
+}
