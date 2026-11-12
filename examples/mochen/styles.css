@@ -864,6 +864,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   font-size: 10px;
   color: #b5b5b5;
 }
+#about-body > .block-head:first-child { margin-top: 0; }
 .experience-list { position: relative; z-index: 1; }
 .job {
   padding: 22px 0;
@@ -932,6 +933,39 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .personal-block { position: relative; z-index: 1; }
 .personal-block .inline-tags { margin-bottom: 12px; }
 .personal-block p + p { margin-top: 8px; }
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.hobby-card { min-width: 0; margin: 0; }
+.hobby-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 22 / 17;
+  object-fit: contain;
+  transition: transform .5s var(--ease);
+}
+.hobby-card figcaption {
+  border-top: 1px solid var(--hair);
+  padding-top: 14px;
+  margin-top: 10px;
+}
+.hobby-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.hobby-description { font-size: 12.5px; line-height: 1.85; color: #777; }
+@media (hover: hover) {
+  .hobby-card:hover .hobby-art { transform: translateY(-3px) rotate(-.4deg); }
+}
+html.motion-reduced .hobby-art { transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .hobby-art { transform: none !important; }
+}
+@media (max-width: 600px) {
+  .hobby-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .hobby-art { max-width: 350px; margin-inline: auto; }
+  .hobby-card figcaption { margin-top: 4px; }
+}
 
 /* ---------------- connect ---------------- */
 

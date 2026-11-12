@@ -228,5 +228,25 @@
   "outdoor": {
     "routes": "骑行 318 · 重装徒步贡嘎大环线 · 重装徒步稻城亚丁大环线",
     "description": "小众轻奢户外品牌主理人，露营单品曾登顶拼多多露营 TOP1。"
-  }
+  },
+  "hobbies": [
+    {
+      "title": "骑行",
+      "description": "骑行 318。",
+      "image": "assets/outdoor/mochen-cycling.svg",
+      "alt": "陌晨戴眼镜、穿深色外套骑自行车，浅金色小狗随行。"
+    },
+    {
+      "title": "徒步",
+      "description": "重装徒步贡嘎大环线、稻城亚丁大环线。",
+      "image": "assets/outdoor/mochen-hiking.svg",
+      "alt": "陌晨背着重装背包，手握登山杖行走在山间，小狗在前方探路。"
+    },
+    {
+      "title": "露营",
+      "description": "小众轻奢户外品牌主理人，露营单品曾登顶拼多多露营 TOP1。",
+      "image": "assets/outdoor/mochen-camping.svg",
+      "alt": "陌晨坐在帐篷旁手握露营杯，身旁有炉具和水壶，小狗伏地休息。"
+    }
+  ]
 }

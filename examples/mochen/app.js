@@ -529,17 +529,8 @@
     var box = $("#about-body");
     if (!box || !state.profile) return;
     var p = state.profile;
-    var m = p.metrics || [];
     var jobs = p.experience || [];
     box.innerHTML =
-      '<div class="about-intro">' +
-        '<p class="about-lead">' + esc(p.headline) + '</p>' +
-        '<p class="about-text">' + esc(p.intro) + '</p>' +
-        '<div class="metrics">' + m.map(function (x) {
-          return '<div class="metric-item"><div class="metric-value">' + esc(x.value) + '</div><div class="metric-label">' + esc(x.label) + '</div></div>';
-        }).join("") + '</div>' +
-      '</div>' +
-
       '<div class="block-head"><h3>工作经历</h3><span class="rule"></span><span class="idx">Experience / ' + jobs.length + '</span></div>' +
       '<div class="experience-list">' + jobs.map(function (j) {
         return '<article class="job">' +
@@ -547,22 +538,17 @@
             '<h4 class="job-company"><button class="job-activate" type="button" title="点击标记这段履历"><span class="job-company-mark">' + esc(j.company) + '</span></button></h4>' +
             '<div class="job-role">' + esc(j.role) + '</div>' +
             '<p class="job-summary">' + esc(j.summary) + '</p>' +
-            (j.details && j.details.length ? '<ul class="job-details">' + j.details.map(function (d) { return "<li>" + esc(d) + "</li>"; }).join("") + '</ul>' : '') +
           '</div>' +
         '</article>';
       }).join("") + '</div>' +
 
-      '<div class="block-head"><h3>AI 自研项目</h3><span class="rule"></span><span class="idx">Projects / ' + (p.aboutProjects || []).length + '</span></div>' +
-      '<div class="info-grid">' + (p.aboutProjects || []).map(function (project) {
-        return '<article class="info-block"><h4>' + esc(project.title) + '</h4><p>' + esc(project.summary) + '</p>' +
-          '<ul class="job-details">' + (project.details || []).map(function (detail) { return '<li>' + esc(detail) + '</li>'; }).join("") + '</ul></article>';
-      }).join("") + '</div>' +
       '<div class="block-head"><h3>工作之外</h3><span class="rule"></span><span class="idx">Personal</span></div>' +
-      '<div class="info-block personal-block">' +
-        '<div class="inline-tags">' + (p.interests || []).map(function (interest) { return '<span class="chip">' + esc(interest) + '</span>'; }).join("") + '</div>' +
-        '<p>' + esc((p.outdoor || {}).routes) + '</p>' +
-        '<p>' + esc((p.outdoor || {}).description) + '</p>' +
-      '</div>';
+      '<div class="personal-block hobby-grid">' + (p.hobbies || []).map(function (hobby) {
+        return '<figure class="hobby-card reveal">' +
+          '<img class="hobby-art" src="' + esc(hobby.image) + '" width="440" height="340" alt="' + esc(hobby.alt) + '" loading="lazy" decoding="async">' +
+          '<figcaption><h4 class="hobby-title">' + esc(hobby.title) + '</h4><p class="hobby-description">' + esc(hobby.description) + '</p></figcaption>' +
+        '</figure>';
+      }).join("") + '</div>';
 
     $$(".job", box).forEach(function (job) {
       job.addEventListener("click", function () {
