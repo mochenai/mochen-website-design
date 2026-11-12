@@ -84,7 +84,7 @@ window.MOCHEN_SITE = {
             },
             {
               "label": "下载个人网站设计skill",
-              "url": "../../downloads/mochen-website-design-1.0.0.zip",
+              "url": "../../downloads/mochen-website-design-1.0.1.zip",
               "download": true
             }
           ],

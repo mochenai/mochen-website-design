@@ -1,6 +1,9 @@
 ---
 name: mochen-website-design
 description: "将用户提供的文章、笔记、履历、作品、产品资料或其他内容创建或改造为陌晨风格的可运行网站。适用于个人网站、作品集、文章专题、产品介绍、知识库和活动页面；用户提到个人网站设计skill、陌晨风格网站或希望沿用陌晨个人网站的审美与交互时使用。仅要求写文案、生成图片或采用另一套品牌设计时不使用。"
+metadata:
+  version: "1.0.1"
+  repository: "https://github.com/mochenai/mochen-website-design"
 ---
 
 # 个人网站设计skill

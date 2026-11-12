@@ -174,3 +174,6 @@ th { background: #fbf8ee; }
   .site-footer { margin-top: 60px; }
 }
 @media (max-width: 359px) { .hero-title { font-size: clamp(58px,20vw,71px); } .hero-title.is-cjk { font-size: 43px; } .tab-row a { font-size: 25px; } .card-body h3 { font-size: 20px; } }
+
+/* Grid reveal wrappers must shrink before code blocks scroll internally. */
+.reveal { min-width: 0; }

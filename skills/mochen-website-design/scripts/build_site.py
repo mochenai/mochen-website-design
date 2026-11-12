@@ -274,7 +274,8 @@ def build(source, output):
     art = (output / "assets/mochen-operator.svg").read_text(encoding="utf-8").replace("<svg ", '<svg class="hero-art" ', 1)
     headline = data["hero"]["title"]
     lines = '<br>'.join('<span class="line-' + str(i) + '">' + html.escape(line) + '</span>' for i, line in enumerate(headline.splitlines(), 1))
-    replacements = {"{{TITLE}}": html.escape(data["title"], quote=True), "{{BRAND}}": html.escape(data["brand"]),
+    asset_version = hashlib.sha256((output / "styles.css").read_bytes() + encoded.encode("utf-8")).hexdigest()[:12]
+    replacements = {"{{ASSET_VERSION}}": asset_version, "{{TITLE}}": html.escape(data["title"], quote=True), "{{BRAND}}": html.escape(data["brand"]),
                     "{{AUTHOR}}": html.escape(data["author"]), "{{HERO_LINES}}": lines,
                     "{{HERO_CLASS}}": "is-cjk" if re.search(r"[\u3400-\u9fff]", headline) else "",
                     "{{EYEBROW}}": html.escape(data["hero"]["eyebrow"]),
