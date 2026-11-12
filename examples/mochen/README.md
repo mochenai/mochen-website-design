@@ -1,6 +1,6 @@
 # 陌晨个人网站 · Skill 完整示例
 
-[在线访问](https://mochenai.github.io/mochen-website-design/) · [返回开源 Skill](../../README.md)
+[在线访问](https://mochenai.github.io/mochen-website-design/) · [返回 Skill 源码](../../README.md)
 
 六个作品、118 篇文章、六段无日期工作经历；联系区仅展示公众号「Agent 陌晨」。首页为 Makes Things.，配有陌晨操作员与可拖动的 Gaze-Dog。
 

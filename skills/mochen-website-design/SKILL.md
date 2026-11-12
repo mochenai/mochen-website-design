@@ -1,8 +1,9 @@
 ---
 name: mochen-website-design
 description: "将用户提供的文章、笔记、履历、作品、产品资料或其他内容创建或改造为陌晨风格的可运行网站。适用于个人网站、作品集、文章专题、产品介绍、知识库和活动页面；用户提到个人网站设计skill、陌晨风格网站或希望沿用陌晨个人网站的审美与交互时使用。仅要求写文案、生成图片或采用另一套品牌设计时不使用。"
+license: PolyForm-Noncommercial-1.0.0
 metadata:
-  version: "1.0.1"
+  version: "1.1.0"
   repository: "https://github.com/mochenai/mochen-website-design"
 ---
 
@@ -50,6 +51,6 @@ python3 -m http.server 8787 --bind 127.0.0.1 --directory "/path/to/output/site-v
 
 如果用户要求纳入陌晨网站作品列表，待技能生成、可运行能力和安装副本核验完成后再添加：标题保持用户指定的「个人网站设计skill」，接入真实说明、示例和下载，同步站内计数及公开数据副本。不要用假文章 ID 或占位链接充当作品入口。
 
-## 开源仓库与示例
+## 源码仓库与示例
 
-此 Skill 位于 `mochenai/mochen-website-design` 仓库的 `skills/mochen-website-design/`。`examples/mochen/` 是作者的完整个人网站示例，单独通过 GitHub Pages 部署；安装和生成时不复制示例里的履历与文章库。需要参考复杂作品、文章或页面实现时再读取对应示例文件。品牌和署名可由当前用户的 `brand`、`author` 配置替换，保留设计语言而不套用作者身份。跨页入口用相对路径，结构化 links 可设 `site_link: true`。源码 MIT 许可及第三方素材说明随 Skill 打包。
+此 Skill 位于 `mochenai/mochen-website-design` 仓库的 `skills/mochen-website-design/`。`examples/mochen/` 是作者的完整个人网站示例，单独通过 GitHub Pages 部署；安装和生成时不复制示例里的履历与文章库。需要参考复杂作品、文章或页面实现时再读取对应示例文件。品牌和署名可由当前用户的 `brand`、`author` 配置替换，保留设计语言而不套用作者身份。跨页入口用相对路径，结构化 links 可设 `site_link: true`。本版本自有代码、文档与模板采用 [PolyForm Noncommercial License 1.0.0](LICENSE)，禁止商用；许可证、必须保留的 NOTICE 与第三方素材说明随 Skill 打包，LICENSE 和 NOTICE 也随模板进入生成的网站。

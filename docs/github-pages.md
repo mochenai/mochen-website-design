@@ -4,7 +4,9 @@
 
 ## 在自己的账号中复用
 
-1. Fork 仓库，并把 `examples/mochen/` 换成自己的静态网站；或先用 Skill 生成，再复制生成目录的内容进去。
+本版本仅限非商业用途，禁止收费建站、商业客户交付及公司商业业务使用。复用和发布时保留 [LICENSE](../LICENSE) 与 [NOTICE](../NOTICE)，第三方素材遵循原条款。
+
+1. 用于非商业项目时，Fork 仓库，并把 `examples/mochen/` 换成自己的静态网站；或先用 Skill 生成，再复制生成目录的内容进去。
 2. 在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
 3. 在 **Actions → Deploy website example to GitHub Pages** 运行 workflow；以后推送 `main` 自动更新。
 4. 部署成功后，在 Pages 设置或部署记录查看公开网址。

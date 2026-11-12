@@ -192,12 +192,12 @@
         "按内容选择作品集、文章专题、产品介绍或知识页面结构。",
         "包含可运行的生成器、网站模板、设计约定和检查脚本。",
         "支持搜索筛选、正文跳转与返回、完整动效，以及可拖动并记住位置的小狗。",
-        "已开源到 GitHub，提供安装方法、实际示例、使用说明和下载。"
+        "源码已公开到 GitHub，提供中英文说明、实际示例和下载；v1.1.0 起禁止商用。"
       ],
       "visual": "website",
       "href": "works/website-design-skill/index.html",
       "link_label": "查看使用方法",
-      "download": "downloads/mochen-website-design-1.0.1.zip"
+      "download": "downloads/mochen-website-design-1.1.0.zip"
     }
   ],
   "influence": [

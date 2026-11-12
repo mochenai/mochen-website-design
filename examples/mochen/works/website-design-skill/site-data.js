@@ -6,7 +6,7 @@ window.MOCHEN_SITE = {
   "hero": {
     "title": "个人网站\n设计skill",
     "eyebrow": "MOCHEN / DESIGN SKILL",
-    "summary": "把文章、资料、作品和产品内容做成陌晨风格的网站。内容决定结构，审美与交互保持一致。"
+    "summary": "把文章、资料、作品和产品内容做成陌晨风格的网站。内容决定结构，审美与交互保持一致。 源码公开，禁止商用。"
   },
   "sections": [
     {
@@ -65,30 +65,40 @@ window.MOCHEN_SITE = {
     {
       "id": "usage",
       "label": "怎么用",
-      "description": "在 Codex 中输入内容或给出文件路径。",
+      "description": "提供内容或文件路径生成网页；v1.1.0 仅限非商用。",
       "layout": "prose",
       "items": [
         {
           "id": "start-here",
           "title": "直接这样说",
-          "summary": "从 GitHub 安装，然后提供自己的内容。",
+          "summary": "安装 v1.1.0，再提供自己的内容。仅限非商业用途。",
           "tag": "调用",
-          "body": "```text\n用 $mochen-website-design，把下面的内容做成陌晨风格的网站。\n\n粘贴文章、笔记、作品介绍，或者给出资料文件路径。\n```\n\n### 从 GitHub 安装\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design\n```\n\n在 Codex 的所有项目中使用：\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global\n```\n\n这个仓库以可复用的网站 Skill 为主项目，陌晨个人网站是其中的完整示例。你可以替换品牌、署名和内容，保留审美与交互。安装包只包含 Skill 与中性模板，不带陌晨的履历和文章库。\n\n### 直接运行生成器\n\n克隆仓库后，在仓库根目录执行：\n\n```bash\npython3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/my-site-v1\npython3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1\npython3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1\n```\n\n生成器直接支持 JSON、Markdown 和 TXT；其他资料由 AI 工具先提取内容。无需 API Key，网页本身不调用外部 AI 接口。\n",
-          "body_html": "\u003cpre>\u003ccode data-language=\"text\">用 $mochen-website-design，把下面的内容做成陌晨风格的网站。\n\n粘贴文章、笔记、作品介绍，或者给出资料文件路径。\u003c/code>\u003c/pre>\n\u003ch3>从 GitHub 安装\u003c/h3>\n\u003cpre>\u003ccode data-language=\"bash\">npx skills add mochenai/mochen-website-design --skill mochen-website-design\u003c/code>\u003c/pre>\n\u003cp>在 Codex 的所有项目中使用：\u003c/p>\n\u003cpre>\u003ccode data-language=\"bash\">npx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global\u003c/code>\u003c/pre>\n\u003cp>这个仓库以可复用的网站 Skill 为主项目，陌晨个人网站是其中的完整示例。你可以替换品牌、署名和内容，保留审美与交互。安装包只包含 Skill 与中性模板，不带陌晨的履历和文章库。\u003c/p>\n\u003ch3>直接运行生成器\u003c/h3>\n\u003cp>克隆仓库后，在仓库根目录执行：\u003c/p>\n\u003cpre>\u003ccode data-language=\"bash\">python3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/my-site-v1\npython3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1\npython3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1\u003c/code>\u003c/pre>\n\u003cp>生成器直接支持 JSON、Markdown 和 TXT；其他资料由 AI 工具先提取内容。无需 API Key，网页本身不调用外部 AI 接口。\u003c/p>",
+          "body": "## 使用许可：禁止商用\n\n从 v1.1.0 起，本 Skill 的自有代码、文档和模板采用 PolyForm Noncommercial License 1.0.0。可用于个人学习、研究及非商业项目；禁止收费建站、商业客户交付、公司商业业务、销售及转售。分发时保留 LICENSE 和 NOTICE。\n\n此前已发布的 MIT 版本继续按原许可授权。第三方素材保留上游条款，陌晨个人文章和履历保留作者权利。\n\n```text\n用 $mochen-website-design，把下面的内容做成陌晨风格的网站。\n\n粘贴文章、笔记、作品介绍，或者给出资料文件路径。\n```\n\n### 从 GitHub 安装\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design\n```\n\n在 Codex 的所有项目中使用：\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global\n```\n\n这个仓库以可复用的网站 Skill 为主项目，陌晨个人网站是其中的完整示例。你可以替换品牌、署名和内容，保留审美与交互。安装包只包含 Skill 与中性模板，不带陌晨的履历和文章库。\n\n### 直接运行生成器\n\n克隆仓库后，在仓库根目录执行：\n\n```bash\npython3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/my-site-v1\npython3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1\npython3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1\n```\n\n生成器直接支持 JSON、Markdown 和 TXT；其他资料由 AI 工具先提取内容。无需 API Key，网页本身不调用外部 AI 接口。\n",
+          "body_html": "\u003ch2>使用许可：禁止商用\u003c/h2>\n\u003cp>从 v1.1.0 起，本 Skill 的自有代码、文档和模板采用 PolyForm Noncommercial License 1.0.0。可用于个人学习、研究及非商业项目；禁止收费建站、商业客户交付、公司商业业务、销售及转售。分发时保留 LICENSE 和 NOTICE。\u003c/p>\n\u003cp>此前已发布的 MIT 版本继续按原许可授权。第三方素材保留上游条款，陌晨个人文章和履历保留作者权利。\u003c/p>\n\u003cpre>\u003ccode data-language=\"text\">用 $mochen-website-design，把下面的内容做成陌晨风格的网站。\n\n粘贴文章、笔记、作品介绍，或者给出资料文件路径。\u003c/code>\u003c/pre>\n\u003ch3>从 GitHub 安装\u003c/h3>\n\u003cpre>\u003ccode data-language=\"bash\">npx skills add mochenai/mochen-website-design --skill mochen-website-design\u003c/code>\u003c/pre>\n\u003cp>在 Codex 的所有项目中使用：\u003c/p>\n\u003cpre>\u003ccode data-language=\"bash\">npx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global\u003c/code>\u003c/pre>\n\u003cp>这个仓库以可复用的网站 Skill 为主项目，陌晨个人网站是其中的完整示例。你可以替换品牌、署名和内容，保留审美与交互。安装包只包含 Skill 与中性模板，不带陌晨的履历和文章库。\u003c/p>\n\u003ch3>直接运行生成器\u003c/h3>\n\u003cp>克隆仓库后，在仓库根目录执行：\u003c/p>\n\u003cpre>\u003ccode data-language=\"bash\">python3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/my-site-v1\npython3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1\npython3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1\u003c/code>\u003c/pre>\n\u003cp>生成器直接支持 JSON、Markdown 和 TXT；其他资料由 AI 工具先提取内容。无需 API Key，网页本身不调用外部 AI 接口。\u003c/p>",
           "bullets": [],
           "links": [
             {
-              "label": "GitHub 开源仓库",
+              "label": "GitHub 源码仓库",
               "url": "https://github.com/mochenai/mochen-website-design",
               "download": false
             },
             {
               "label": "下载个人网站设计skill",
-              "url": "../../downloads/mochen-website-design-1.0.1.zip",
+              "url": "../../downloads/mochen-website-design-1.1.0.zip",
               "download": true
+            },
+            {
+              "label": "English README",
+              "url": "https://github.com/mochenai/mochen-website-design/blob/main/README.en.md",
+              "download": false
+            },
+            {
+              "label": "非商用许可证",
+              "url": "https://github.com/mochenai/mochen-website-design/blob/main/LICENSE",
+              "download": false
             }
           ],
-          "search_text": "直接这样说 ```text\n用 $mochen-website-design，把下面的内容做成陌晨风格的网站。\n\n粘贴文章、笔记、作品介绍，或者给出资料文件路径。\n```\n\n### 从 GitHub 安装\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design\n```\n\n在 Codex 的所有项目中使用：\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global\n```\n\n这个仓库以可复用的网站 Skill 为主项目，陌晨个人网站是其中的完整示例。你可以替换品牌、署名和内容，保留审美与交互。安装包只包含 Skill 与中性模板，不带陌晨的履历和文章库。\n\n### 直接运行生成器\n\n克隆仓库后，在仓库根目录执行：\n\n```bash\npython3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/my-site-v1\npython3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1\npython3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1\n```\n\n生成器直接支持 JSON、Markdown 和 TXT；其他资料由 AI 工具先提取内容。无需 API Key，网页本身不调用外部 AI 接口。\n 从 GitHub 安装，然后提供自己的内容。 "
+          "search_text": "直接这样说 ## 使用许可：禁止商用\n\n从 v1.1.0 起，本 Skill 的自有代码、文档和模板采用 PolyForm Noncommercial License 1.0.0。可用于个人学习、研究及非商业项目；禁止收费建站、商业客户交付、公司商业业务、销售及转售。分发时保留 LICENSE 和 NOTICE。\n\n此前已发布的 MIT 版本继续按原许可授权。第三方素材保留上游条款，陌晨个人文章和履历保留作者权利。\n\n```text\n用 $mochen-website-design，把下面的内容做成陌晨风格的网站。\n\n粘贴文章、笔记、作品介绍，或者给出资料文件路径。\n```\n\n### 从 GitHub 安装\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design\n```\n\n在 Codex 的所有项目中使用：\n\n```bash\nnpx skills add mochenai/mochen-website-design --skill mochen-website-design --agent codex --global\n```\n\n这个仓库以可复用的网站 Skill 为主项目，陌晨个人网站是其中的完整示例。你可以替换品牌、署名和内容，保留审美与交互。安装包只包含 Skill 与中性模板，不带陌晨的履历和文章库。\n\n### 直接运行生成器\n\n克隆仓库后，在仓库根目录执行：\n\n```bash\npython3 skills/mochen-website-design/scripts/build_site.py --input skills/mochen-website-design/assets/example-content.json --output work/my-site-v1\npython3 skills/mochen-website-design/scripts/validate_site.py work/my-site-v1\npython3 -m http.server 8787 --bind 127.0.0.1 --directory work/my-site-v1\n```\n\n生成器直接支持 JSON、Markdown 和 TXT；其他资料由 AI 工具先提取内容。无需 API Key，网页本身不调用外部 AI 接口。\n 安装 v1.1.0，再提供自己的内容。仅限非商业用途。 "
         }
       ]
     },
